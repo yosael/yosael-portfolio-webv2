@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import MyLogo from "@/public/images/logo-light.svg";
+import PageLogoApp from "@/public/images/PageLogoApp.jpeg";
 
 type MenuItems = {
   name: string;
@@ -16,18 +16,18 @@ const menuItems: MenuItems[] = [
 
 export default function Navbar() {
   return (
-    <div className="sm:container sm:mx-auto">
+    <div className="sm:container sm:mx-auto  pb-8 px-9">
       <nav className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
         <div className="w-full flex justify-between items-center px-4 sm:px-0">
           <div className="flex items-center  text-black mr-8 cursor-pointer">
             {/* text next to an image */}
             <Link href={"/"}>
               <Image
-                src={MyLogo}
+                src={PageLogoApp}
                 alt="Edwin Icon"
-                width={150}
-                height={120}
-                className="w-36  mr-0 pr-0"
+                width={120}
+                height={100}
+                className="rounded-full shadow-gray-800"
               />
             </Link>
           </div>
@@ -49,7 +49,7 @@ export default function Navbar() {
               className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
               aria-label="Hire Me Button"
             >
-              Hire Me
+              Work with me
             </button>
           </div>
         </div>
