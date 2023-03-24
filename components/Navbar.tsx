@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PageLogoApp from "@/public/images/PageLogoApp.jpeg";
+import WorkWithMeModal from "./WorkWithMeModal";
 
 type MenuItems = {
   name: string;
@@ -9,12 +11,26 @@ type MenuItems = {
 };
 
 const menuItems: MenuItems[] = [
-  { name: "About", link: "/about" },
+  { name: "Home", link: "/" },
   { name: "Projects", link: "/projects" },
-  { name: "Contact", link: "/contact" },
+  { name: "About", link: "/about" },
 ];
 
 export default function Navbar() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const onWorkWithMeClick = () => {
+    // set Open Modal true
+    console.log("Open Modal");
+    setIsModalOpen(true);
+  };
+
+  const onModalClose = () => {
+    // set Open Modal false
+    console.log("Close Modal");
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="sm:container sm:mx-auto  pb-8 px-9">
       <nav className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
@@ -48,12 +64,18 @@ export default function Navbar() {
             <button
               className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
               aria-label="Hire Me Button"
+              onClick={onWorkWithMeClick}
             >
-              Work with me
+              Contact me
             </button>
           </div>
         </div>
       </nav>
+      <div>
+        {isModalOpen && (
+          <WorkWithMeModal isOpen={isModalOpen} onClose={onModalClose} />
+        )}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import DeloitteLogo from "@/public/companiesLogos/deloitteLogo.png";
 import AudiomedLogo from "@/public/companiesLogos/audiomedLogo.png";
 import GTLogo from "@/public/companiesLogos/logo-Gyt.png";
-import DaviviendaLogo from "@/public/companiesLogos/banco-davivienda-Logo.jpg";
+import DaviviendaLogo from "@/public/companiesLogos/daviviendaLogo.jpg";
 import TelusLogo from "@/public/companiesLogos/telus-logo.png";
 import QuantumBlackLogo from "@/public/companiesLogos/quantumBlackLogo.png";
 import { Company } from "@/types/Types";

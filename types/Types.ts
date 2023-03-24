@@ -11,3 +11,8 @@ export type Company = {
   image: StaticImageData;
   url: string;
 };
+
+export type SocialNetwork = {
+  name: string;
+  url: string;
+};

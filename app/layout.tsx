@@ -1,4 +1,6 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import WorkWithMeModal from "@/components/WorkWithMeModal";
 import "@/styles/globals.css";
 
 export const metadata = {
@@ -16,6 +18,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
